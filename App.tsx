@@ -57,10 +57,10 @@ const handlePreviousButton =()=>{
 
   return (
     <View style={styles.container}>
-      <Text style={styles.titleText} >Riddles</Text>
+      <Text testID='txtTitle' style={styles.titleText} >Riddles</Text>
       <View style={styles.buttonView}> 
-      <TouchableOpacity onPress={()=> handlePreviousButton()} style={styles.button}><Text>Previous Riddle</Text></TouchableOpacity>
-      <TouchableOpacity onPress={()=> handleNextButton()} style={styles.button}><Text>Next Riddle</Text></TouchableOpacity>
+      <TouchableOpacity testID='btnPrevious' onPress={()=> handlePreviousButton()} style={styles.button}><Text>Previous Riddle</Text></TouchableOpacity>
+      <TouchableOpacity testID='btnNext' onPress={()=> handleNextButton()} style={styles.button}><Text>Next Riddle</Text></TouchableOpacity>
       </View>
       <View style={styles.cardView}>
       <RiddleCard riddle={riddleQ} answer={riddleAnswer} key={riddleId} id={riddleId}/> 

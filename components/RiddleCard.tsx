@@ -20,12 +20,12 @@ const RiddleCard: React.FC<RiddleCardProps> = (props) => {
       <View style={styles.card}>
       
       <Text style = {styles.cardText}>{riddle}</Text>
-      <TouchableOpacity onPress={() => setIsAnswerVisible(!isAnswerVisible)}>
+      <TouchableOpacity testID='btnAnswer' onPress={() => setIsAnswerVisible(!isAnswerVisible)}>
         <View>
           {isAnswerVisible ? (
-            <Text style={styles.cardText}>{answer}</Text>
+            <Text testID='txtAnswer' style={styles.cardText}>{answer}</Text>
           ) : (
-            <Text style={styles.cardText}>Tap for Answer</Text>
+            <Text testID='txtTapForAnswer'style={styles.cardText}>Tap for Answer</Text>
           )}
         </View>
       </TouchableOpacity>
