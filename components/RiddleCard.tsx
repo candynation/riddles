@@ -19,7 +19,7 @@ const RiddleCard: React.FC<RiddleCardProps> = (props) => {
     <View>
       <View style={styles.card}>
       
-      <Text style = {styles.cardText}>{riddle}</Text>
+      <Text testID='txtQuestion' style = {styles.cardText}>{riddle}</Text>
       <TouchableOpacity testID='btnAnswer' onPress={() => setIsAnswerVisible(!isAnswerVisible)}>
         <View>
           {isAnswerVisible ? (
